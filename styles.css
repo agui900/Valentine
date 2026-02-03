@@ -11,10 +11,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Georgia", "Times New Roman", serif;
-  background: radial-gradient(circle at top, #ffe1ea 0%, var(--bg) 45%, #fff 100%);
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at top, #ffe1ea 0%, var(--bg) 45%, #fff 100%);
   color: var(--ink);
   min-height: 100vh;
 }
@@ -94,6 +100,12 @@ h1 {
   box-shadow: 0 10px 20px rgba(255, 92, 138, 0.25);
 }
 
+.btn,
+button.btn {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
 .btn:hover {
   transform: translateY(-2px);
   background: var(--accent-dark);
@@ -104,6 +116,26 @@ h1 {
   color: var(--accent-dark);
   border: 1px solid var(--soft);
   box-shadow: none;
+}
+
+.btn.ghost,
+button.btn.ghost {
+  background: transparent !important;
+  color: var(--accent-dark) !important;
+  border-color: var(--soft) !important;
+}
+
+.btn.locked {
+  background: var(--accent);
+  color: white;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.btn.locked:hover {
+  transform: none;
+  background: var(--accent);
 }
 
 .secret {

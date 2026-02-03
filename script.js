@@ -17,8 +17,8 @@ let moveCount = 0;
 function celebrateYes() {
   if (!answerEl) return;
   answerEl.textContent = "Yay! Happy Valentine's Day!";
-  yesBtn.disabled = true;
-  noBtn.disabled = true;
+  yesBtn.classList.add("locked");
+  noBtn.classList.add("locked");
   yesBtn.textContent = "It's a yes";
   if (funnyEl) funnyEl.textContent = "";
 }
